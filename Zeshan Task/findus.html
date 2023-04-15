@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Us</title>
+    <link rel="stylesheet" href="./css/findus.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Web Assignment</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+          <a href="./index.html#about-me">About</a>
+          <a href="./index.html#contact">Contact</a>
+          <a href="product.html">Product</a>
+          <a href="findus.html">FindUs</a>
+          <a href="gallery.html">Gallery</a>
+
+        </nav>
+      </header>
+      <h1>Business Address</h1>
+      <br/><br/>
+	<div id="map"></div>
+	<div id="marker"></div>
+	<div id="info">
+		<h3>Business Name</h3>
+		<p>1234 Main St, Anytown, USA</p>
+	</div>
+
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=[YOUR_MAPS_API_KEY]&callback=loadMapScenario' async defer></script>
+    <script>
+    function loadMapScenario() {
+    var map = new Microsoft.Maps.Map(document.getElementById('map'), {
+    center: new Microsoft.Maps.Location(47.6062, -122.3321),
+    zoom: 10
+    });
+    var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png', anchor: new Microsoft.Maps.Point(12, 39) });
+		var infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+			title: 'Business Name',
+			description: '1234 Main St, Anytown, USA',
+			visible: false
+		});
+
+		infobox.setMap(map);
+		Microsoft.Maps.Events.addHandler(pushpin, 'click', function () {
+			infobox.setOptions({ visible: true });
+		});
+
+		map.entities.push(pushpin);
+	}
+
+    // Sticky header on scroll
+    window.onscroll = function() {stickyHeader()};
+
+    var header = document.querySelector(".header");
+    var sticky = header.offsetTop;
+
+    function stickyHeader() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+    }
+</script>
+<br/><br/><br/>
+<footer>
+    <span>Created By Developer | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+</footer>
+</body>
+</html>

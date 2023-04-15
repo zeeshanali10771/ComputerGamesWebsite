@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/gallery.css">
+  </head>
+  <body>
+    <header class="header">
+        <a href="#" class="logo">Web Assignment</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+          <a href="./index.html#about-me">About</a>
+          <a href="./index.html#contact">Contact</a>
+          <a href="product.html">Product</a>
+          <a href="findus.html">FindUs</a>
+          <a href="gallery.html">Gallery</a>
+
+        </nav>
+      </header>
+      <h1>Computer Games</h1>
+      <br/><br/>
+    <div id="gallery">
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/04CGOeudfmNJleLR0SccKpP.fit_lim.size_1200x675.v1569506699.jpg" data-fancybox="gallery" data-caption="Product 1"><img src="https://i.pcmag.com/imagery/roundup-products/04CGOeudfmNJleLR0SccKpP.fit_lim.size_1200x675.v1569506699.jpg" alt="Product 1"></a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/04nnUKObz8isb0AV86ROyxn.fit_lim.size_1200x675.v1569506759.jpg" data-fancybox="gallery" data-caption="Product 2"><img src="https://i.pcmag.com/imagery/roundup-products/04nnUKObz8isb0AV86ROyxn.fit_lim.size_1200x675.v1569506759.jpg" alt="Product 2"></a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/06692tjiLwFoqwRsUCTIlD0.fit_lim.size_1200x675.v1569507773.jpg" data-fancybox="gallery" data-caption="Product 3"><img src="https://i.pcmag.com/imagery/roundup-products/06692tjiLwFoqwRsUCTIlD0.fit_lim.size_1200x675.v1569507773.jpg" alt="Product 3"></a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/06RVHFqO1JxBQ4wOCPTA5BS.fit_lim.size_1200x675.v1569506599.jpg" data-fancybox="gallery" data-caption="Product 4"><img src="https://i.pcmag.com/imagery/roundup-products/06RVHFqO1JxBQ4wOCPTA5BS.fit_lim.size_1200x675.v1569506599.jpg" alt="Product 4"></a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/06sm4EnWS8CpxbYm36MDdXE.fit_lim.size_1200x675.v1569506137.jpg" data-fancybox="gallery" data-caption="Product 5"><img src="https://i.pcmag.com/imagery/roundup-products/06sm4EnWS8CpxbYm36MDdXE.fit_lim.size_1200x675.v1569506137.jpg" alt="Product 5"></a>
+      </div>
+      <div class="gallery-item">
+        <a href="https://i.pcmag.com/imagery/roundup-products/06sm4EnWS8CpxbYm36MDdXE.fit_lim.size_1200x675.v1569506137.jpg" data-fancybox="gallery" data-caption="Product 6"><img src="https://i.pcmag.com/imagery/roundup-products/06sm4EnWS8CpxbYm36MDdXE.fit_lim.size_1200x675.v1569506137.jpg" alt="Product 6"></a>
+      </div>
+    </div><br/><br/><br/><br/><br/><br/><br/>
+    <footer>
+        <span>Created By Developer | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('[data-fancybox ="gallery"]').fancybox({
+            buttons: [
+            "zoom",
+            "slideShow",
+            "thumbs",
+            "close"
+            ],
+            loop: true,
+            protect: true
+            });
+            });
+    </script>
+
+  </body>
+  
+</html>

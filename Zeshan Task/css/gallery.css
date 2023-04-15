@@ -1,0 +1,84 @@
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f5f5f5;
+        }
+        .header.sticky{
+            padding: 15px 0;
+            background: crimson;
+        }
+        .header .logo {
+        font-size: 25px;
+        font-family: 'Sriracha', cursive;
+        color: #000;
+        text-decoration: none;
+        margin-left: 30px;
+        }
+        h1 {
+        font-size: 36px;
+        text-align: center;
+        font-family: 'Sriracha', cursive;
+       }
+         .nav-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f5f5f5;
+        margin-right: 20px;
+        }
+
+        .nav-items a {
+        text-decoration: none;
+        color: #000;
+        padding: 35px 20px;
+        }
+      #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .gallery-item {
+        width: 32%;
+        margin-bottom: 20px;
+      }
+      
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+      
+      @media (max-width: 768px) {
+        .gallery-item {
+          width: 48%;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .gallery-item {
+          width: 100%;
+        }
+      }
+      footer{
+        background: #111;
+        padding: 15px 23px;
+        color: #fff;
+        text-align: center;
+        }
+        footer span a{
+            color: crimson;
+            text-decoration: none;
+        }
+        footer span a:hover{
+            text-decoration: underline;
+        }
+      

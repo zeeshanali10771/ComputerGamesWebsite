@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products Page</title>
+    <link rel="stylesheet" type="text/css" href="./css/product.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+  </head>
+  
+  <body>
+    <header class="header">
+        <a href="#" class="logo">Web Assignment</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+          <a href="./index.html#about-me">About</a>
+          <a href="./index.html#contact">Contact</a>
+          <a href="#top">Product</a>
+          <a href="findus.html">FindUs</a>
+          <a href="gallery.html">Gallery</a>
+
+        </nav>
+      </header>
+    <main>
+      <h1>Computer Games</h1>
+      <section>
+        <div class="product">
+          <img src="https://i.pcmag.com/imagery/roundup-products/04CGOeudfmNJleLR0SccKpP.fit_lim.size_1200x675.v1569506699.jpg" alt="Product 1">
+          <h2>Dreamfall Chapters for PC</h2>
+          <p>Dreamfall Chapters takes place in a universe with parallel cyberpunk futuristic and magical fantasy worlds. You control several characters as they explore environments, continue the story, and solve puzzles. There are no combat or stealth elements in the game, with Dreamfall instead focusing on the player discovering secrets through exploration and making pivotal choices that will alter parts of the story. </p>
+          <p>Price: $50</p>
+          <label for="quantity1">Quantity:</label>
+          <input type="number" id="quantity1" name="quantity1" value="0" min="0">
+        </div>
+        <div class="product">
+          <img src="https://i.pcmag.com/imagery/roundup-products/04nnUKObz8isb0AV86ROyxn.fit_lim.size_1200x675.v1569506759.jpg" alt="Product 2">
+          <h2>Detroit: Become Human for PS4</h2>
+          <p>The 2018 adventure game Detroit: Become Human centers around three android characters who are each controllable through episodic chapters. Players have the ability to make choices on their behalf that can drastically alter the story, resulting in their success, failure, or even death. Episodes can even be replayed to discover new possibilities from choices that were not made. </p>
+          <p>Price: $100</p>
+          <label for="quantity2">Quantity:</label>
+          <input type="number" id="quantity2" name="quantity2" value="0" min="0">
+        </div>
+        <div class="product">
+          <img src="https://i.pcmag.com/imagery/roundup-products/06692tjiLwFoqwRsUCTIlD0.fit_lim.size_1200x675.v1569507773.jpg" alt="Product 3">
+          <h2>Firewatch for PC</h2>
+          <p>Firewatch is a first-person adventure game that puts you in control of a fire lookout named Henry in the Shoshone National Forest. The game takes place in 1989, and follows Henry as he explores the forest and uncovers a conspiracy. A majority of the game’s story and dialogue comes from Henry’s interactions with his superior over a walkie-talkie. Players decide how the two interact and how their relationship develops. </p>
+          <p>Price: $75</p>
+          <label for="quantity3">Quantity:</label>
+          <input type="number" id="quantity3" name="quantity3" value="0" min="0">
+        </div>
+        <div class="product">
+          <img src="https://i.pcmag.com/imagery/roundup-products/06RVHFqO1JxBQ4wOCPTA5BS.fit_lim.size_1200x675.v1569506599.jpg" alt="Product 4">
+          <h2>The Last Of Us Remastered for PS4</h2>
+          <p>Though The Last of Us features a fair amount of zombie-killing action, its real focus is on tense post-apocalyptic atmosphere and the tender bond between its protagonists. You control Joel through combat and survival scenarios as he escorts Ellie, his teenage surrogate daughter, to safety. Players experience a decimated America filled with pain, heartache, and zombies on a truly cinematic level. </p>
+          <p>Price: $120</p>
+          <label for="quantity4">Quantity:</label>
+          <input type="number" id="quantity4" name="quantity4" value="0" min="0">
+        </div>
+        <div class="product">
+          <img src="https://i.pcmag.com/imagery/roundup-products/06sm4EnWS8CpxbYm36MDdXE.fit_lim.size_1200x675.v1569506137.jpg" alt="Product 5">
+          <h2>OXENFREE</h2>
+          <p>The supernatural horror adventure game Oxenfree(Opens in a new window) centers around a group of kids who must uncover the truth about a mysterious island. There are no cutscenes in the game, so all dialogue takes place during gameplay, allowing the player to focus as much or as little on the story as they want. Oxenfree has multiple endings and no game-over screen, which means the player's decisions directly alter the game's storyline.</p>
+          <p>Price: $90</p>
+          <label for="quantity5">Quantity:</label>
+          <input type="number" id="quantity5" name="quantity5" value="0" min="0">
+        </div>
+      </div>
+      </section>
+      <button id="checkout">Checkout</button>
+      <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Order Summary</h2>
+          <table>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+            <tbody id="cart">
+           
+            </tbody>
+        </table>
+        <div>
+            <button id="confirm-order">Confirm Order</button>
+          </div>
+          
+          <div id="shipping-details" style="display:none;">
+            <h2>Enter your shipping details</h2>
+            <form id="shipping-form">
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+              </div>
+              <div>
+                <label for="contact">Contact number:</label>
+                <input type="text" id="contact" name="contact" required>
+              </div>
+              <div>
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+                <button type="submit">Confirm</button>
+              </div>
+            </form>
+          </div>
+          
+          <div id="order-confirmation" style="display:none;">
+            <h2>Thank you for your order</h2>
+          </div>
+          
+      </div>
+    </div>
+  </main>
+  <br/><br/><br/><br/>
+  <footer>
+    <span>Created By Developer | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+</footer>
+  
+  <script src="./js/porduct.js"></script>
+</body>
+</html>
